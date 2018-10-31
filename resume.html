@@ -6,63 +6,107 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>my resume</title>
     <link rel="stylesheet" href="./a.css">
+    <script src="//at.alicdn.com/t/font_897502_p6596el0wzp.js"></script>
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="topNavBar clearfix">
-        <a class="logo" href="#" alt="logo" style="float: left; ">
-            <span class="rs">RS</span><span class="card">card</span>
-          </a>
-        <nav>
-        <ul class="clearfix">
-            <li><a href="#">关于</a></li>
-            <li><a href="#">技能</a></li>
-            <li><a href="#">作品</a></li>
-            <li><a href="#">博客</a></li>
-            <li><a href="#">日历</a></li>
-            <li><a href="#">联系方式</a></li>
-            <li><a href="#">其他</a></li>
-        </ul>
-        </nav>
+    <div class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+                <a class="logo" href="#" alt="logo" style="float: left; ">
+                        <span class="rs">RS</span><span class="card">card</span>
+                      </a>
+                    <nav>
+                    <ul class="clearfix">
+                        <li><a href="#">关于</a></li>
+                        <li><a href="#">技能</a></li>
+                        <li><a href="#">作品</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">日历</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                    </nav>
+        </div>
+        
     </div>
-    <div class="banner"></div> 
+
+    <div class="banner">
+        <div class="mask"> </div>
+    </div> 
 
     <main>
-        <div class="card">
-            <div class="picture">
-                <img src="" alt="头像">
-            <div class="text">
-                <div class="profile">
-                    <span class="welcome">hello</span>
-                    <h1>钟经义</h1>
-                    <p>前端开发工程师</p>
-                    <hr>
-                    <dl>
-                        <dt>年龄</dt>
-                        <dd>24</dd>
-                        <dt>所在城市</dt>
-                        <dd>上海</dd>
-                        <dt>邮箱</dt>
-                        <dd>741472797@qq.com</dd>
-                        <dt>手机</dt>
-                        <dd>18860905139</dd>
-                    </dl>
-                </div>
+        <div class="usercard">
+            <div class="pictureAndText clearfix">
+                    <div class="picture">
+                            <img src="./img/avatar.jpg" width="299px" height="347px" alt="头像">
+                        </div>
+                    <div class="text">
+                                <span class="welcome">HELLO
+                                    <span class="triangle"></span>
+                                </span>
+                                <h1>钟经义</h1>
+                                <p>前端开发工程师</p>
+                                <hr>
+                                <dl>
+                                    <dt>年龄</dt>
+                                    <dd>24</dd>
+                                    <dt>所在城市</dt>
+                                    <dd>上海</dd>
+                                    <dt>邮箱</dt>
+                                    <dd>741472797@qq.com</dd>
+                                    <dt>手机</dt>
+                                    <dd>18860905139</dd>
+                                </dl>
+                    </div>
+            </div>
+            
+          
                 <footer class="media">
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                    <a href="#"><img src="#" alt="..."></a>
-                </footer>
-            </div>
-            </div>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weixin"></use>
+                        </svg>
+                    </a>
+                   
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zhihu-copy"></use>
+                        </svg>
+                    </a>
+
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-qq"></use>
+                        </svg>   
+                    </a>
+
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg> 
+                    </a>
+
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xinlang"></use>
+                        </svg>
+                    </a>
+                
+                </footer>  
         </div>
+
         <a class="button" href="#">下载PDF简历</a>
         <p>钟经义， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。<br>
-            技能：前端开发，Rails 开发，Node.js 开发</p>
+            技能：前端开发，Rails 开发，Node.js 开发
+        </p>
     </main>
 </body>
 </html>
