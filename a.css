@@ -10,10 +10,16 @@ a{
     margin: 0;
     padding: 0;
 }
+h1,h2,h3,h4,h5{
+    font-weight: normal;
+}
 hr{
     height: 0;
     border: none;
     border-top: 1px solid #dedede;
+}
+ul,ol{
+    list-style: none;
 }
 .clearfix::after{
     content: '';
@@ -92,8 +98,39 @@ hr{
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);/*加阴影*/
+}
+body > main{
+    margin-top: -340px;
+}
+body > main .downloadResume-wrapper{
+    text-align: center;
+}
+body > main .downloadResume{
+    font-size: 14px;
+    line-height: 16px;
+    padding: 21px 55px;
+    border:1px solid #cdcfd1;
+    display: inline-block;
+    background: #efefef;
+    border-radius: 2px;
+    color: #3d4451;
+    font-weight: bold;
+    margin: 32px 0;
+    transition: box-shadow 0.2s; /* hover过渡效果为0.2s */
+}
+body > main .downloadResume:hover{
+    box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2);
 }
 
+.selfIntroducation{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: kaiti;
+    font-size: 18px;
+}
 .usercard .welcome{
     background: #e6686a;
     color:white;
@@ -164,4 +201,111 @@ hr{
     height: 30px;
     fill: white;
     vertical-align: top;
+}
+section.skills,
+section.portfolio{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+section.skills h2,
+section.portfolio h2{
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+section.skills ol{
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+}
+section.skills ol li{
+    float: left;
+    width: 48%;
+    box-sizing: border-box;/*加入box-sizing后padding算在48%之内，为了实现两端留出的空隙一样*/
+}
+section.skills ol li:nth-child(even) {/*nth-child是伪类，与hover类似。
+    even表示偶数，当你是偶数时执行右浮，odd为奇数。为了实现两端留出的空隙一样*/
+    float: right;
+}
+section.skills h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+section.skills .progressBar{
+    height: 3px;
+    background: #fae1e1;
+    border-radius: 2px;
+    margin: 4px 0 40px ;
+}
+section.skills .progress{
+    height: 3px;
+    width: 75%;
+    background: #e6686a;
+    border-radius: 2px;
+}
+section.portfolio{
+    text-align: center;
+    margin-bottom: 100px;
+}
+section.portfolio nav{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 32px;
+}
+section.portfolio nav ol{
+   
+    margin: 0 auto;
+    display: inline-block;/*使文字块状收缩*/
+    vertical-align: top;/*可解决加完inline-block后下面带来的一小段空隙*/
+
+}
+section.portfolio nav ol li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;/*使鼠标点击变手势型*/
+}
+section.portfolio nav ol li:nth-child(1){/*使第1个不向左移40px，否则影响居中。nth-child(1)也可写为first-child*/
+    margin-left: 0px;
+}
+section.portfolio nav .bar{
+    height: 5px;
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 45px;
+    border-radius: 2px;
+    
+}
+section.portfolio nav .bar-inner{
+    height: 100%;
+    background: #e6686a;
+    width: 10%;
+    border-radius: 2px;
+    transition: all 0.3s;/*加入过度动画，使所有动画过度时间为0.3s*/
+    
+}
+section.portfolio nav .bar.state-1 .bar-inner{/*加入bar的三种状态，然后通过javascript实现*/
+    margin-left: 0;
+    width: 50px;
+}
+section.portfolio nav .bar.state-2 .bar-inner{
+    margin-left: 65px;
+    width: 50px;
+}
+section.portfolio nav .bar.state-3 .bar-inner{
+    margin-left: 140px;
+    width: 96px;
+}
+section.portfolio .works{
+    position: relative;
+}
+section.portfolio .works .big,
+section.portfolio .works .small{
+    position: absolute;
 }
