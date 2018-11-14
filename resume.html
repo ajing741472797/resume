@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>my resume</title>
-    <link rel="stylesheet" href="./a.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./loading.css">
     <script src="//at.alicdn.com/t/font_897502_p6596el0wzp.js"></script>
     <style type="text/css">
         .icon {
@@ -14,10 +15,28 @@
            fill: currentColor;
            overflow: hidden;
         }
+
+        .site-welcome{
+            display: none;
+            position: fixed;
+            top: 0;left: 0;width: 100%;height: 100%;
+            background:rgb(255, 255, 255);
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .site-welcome.active{
+            display:flex;
+        }
     </style>
 </head>
 
 <body>
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
     <div class="topNavBar">
         <div class="topNavBar-inner clearfix">
                 <a class="logo" href="#" alt="logo" style="float: left; ">
@@ -192,5 +211,8 @@
         </div>
   
       </section>
+      <script>
+          siteWelcome.classList.remove('active')
+      </script>
     </body>
   </html>
