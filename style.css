@@ -74,7 +74,7 @@ ul,ol{
     display: block;
     position: relative;
 }
-.topNavBar nav>ul>li>a:hover::after{
+.topNavBar nav>ul>li.active>a::after{
     content: '';
     display:block;
     position: absolute;
@@ -96,14 +96,27 @@ ul,ol{
 .topNavBar .submenu{
     display: none;
     position:absolute;
-    left: 0;
+    right: -18px;
     top: 100%;
+    background: white;
+    color:#3d4451;
+    cursor: pointer;
 }
-.topNavBar .submenu.active{
+.topNavBar li.active>.submenu{
     display: block;
+    animation:submenuSlide 0.3s;
+}
+@keyframes submenuSlide{
+    0%{
+        margin-right: 100%;
+    }
+    100%{
+        margin-right: 0%;
+    }
 }
 .topNavBar .submenu > li{
     white-space: nowrap;
+    padding: 5px 10px;
 }
             
 

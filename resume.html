@@ -41,18 +41,18 @@
                 <a class="logo" href="#" alt="logo" style="float: left; ">
                         <span class="rs">RS</span><span class="card">card</span>
                       </a>
-                    <nav>
+                    <nav class="menu">
                     <ul class="clearfix">
-                        <li><a href="#">关于</a></li>
-                        <li><a href="#">技能</a></li>
-                        <li><a class="menuTigger" href="#">作品</a>
+                        <li><a href="#siteAbout">关于</a></li>
+                        <li><a href="#siteSkills">技能</a></li>
+                        <li><a href="#siteWorks">作品</a>
                             <ul class="submenu">
                                     <li>作品1</li>
                                     <li>作品2</li>
                                     <li>作品3</li>
                             </ul>
                         </li>
-                        <li><a class="menuTigger" href="#">博客</a>
+                        <li><a href="#">博客</a>
                             <ul class="submenu">
                                     <li>博客1</li>
                                     <li>博客2</li>
@@ -73,7 +73,7 @@
     </div> 
 
     <main>
-        <div class="usercard">
+        <div id="siteAbout" class="usercard">
             <div class="pictureAndText clearfix">
                     <div class="picture">
                             <img src="./img/avatar.jpg" width="299px" height="347px" alt="头像">
@@ -139,7 +139,7 @@
             技能：前端开发，Rails 开发，Node.js 开发
         </p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
           <li>
@@ -186,7 +186,7 @@
             </li>
         </ol>
       </section>
-      <section class="portfolio">
+      <section id="siteWorks" class="portfolio">
         <h2>作品集</h2>
         <nav>
           <ol class="clearfix">
@@ -232,18 +232,25 @@
             topNavBar.classList.remove('sticky')
             }
         }
-        let aTags = document.getElementsByClassName('menuTigger')
-        for(let i=0;i<aTags.length;i++){
-            aTags[i].onmouseenter = function(x){
-                let a = x.currentTarget
-                let brother = a.nextSibling
-                while(brother.nodeType ===3){
-                    brother = brother.nextSibling
-                }
-                console.log(brother)
+        let liTags = document.querySelectorAll('nav.menu > ul > li')
+        for(let i=0;i<liTags.length;i++){
+            liTags[i].onmouseenter = function(x){
+                x.currentTarget.classList.add('active')
             }
-            aTags[i].onmouseleave = function(){
-                console.log('mouseleave')
+            liTags[i].onmouseleave = function(x){
+                x.currentTarget.classList.remove('active')
+            }
+        }
+
+        let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+        for(let i=0;i<aTags.length;i++){
+            aTags[i].onclick = function(x){
+                x.preventDefault() //阻止默认操作，a标签锚点跳转
+                let a = x.currentTarget //获取a标签
+                let href = a.getAttribute('href')//'#siteAbout' 拿到你写的herf值，不带http协议，不加getAttribute就是浏览器处理过的地址，带http协议
+                let element = document.querySelector(href) //根据href得到元素
+                let top = element.offsetTop //offsetTop 元素距离页面顶端的距离
+                window.scrollTo(0,top-90) //让window滑动到对应位置
             }
         }
     </script>
