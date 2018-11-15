@@ -26,6 +26,17 @@ ul,ol{
     display: block;
     clear: both;
 }
+[data-x].active{
+    outline: 10px solid red;
+}
+
+[data-x].offset{
+    transform: translateY(80px);
+}
+[data-x]{
+    transform: translateY(0px);
+    transition: all 0.5s;
+}
 
 .topNavBar{
     padding:20px 0px;
@@ -74,7 +85,8 @@ ul,ol{
     display: block;
     position: relative;
 }
-.topNavBar nav>ul>li.active>a::after{
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highlight>a::after{
     content: '';
     display:block;
     position: absolute;
@@ -85,6 +97,7 @@ ul,ol{
     height: 3px;
     animation: menuSlide 0.3s;
 }
+
 @keyframes menuSlide{
     0%{
         width: 0;
