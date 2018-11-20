@@ -73,6 +73,7 @@ ul,ol{
     margin-left: 17px;
     margin-right: 17px;
     position: relative;
+    font-size: 13px;
 }
 .topNavBar nav>ul>li>a{
     font-size: 12px;
@@ -109,7 +110,7 @@ ul,ol{
 .topNavBar .submenu{
     display: none;
     position:absolute;
-    right: -18px;
+    right: -15px;
     top: 100%;
     background: white;
     color:#3d4451;
