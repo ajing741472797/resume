@@ -6,31 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>my resume</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <script src="//at.alicdn.com/t/font_897502_p6596el0wzp.js"></script>
-    <style type="text/css">
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
-        }
-
-        .site-welcome{
-            display: none;
-            position: fixed;
-            top: 0;left: 0;width: 100%;height: 100%;
-            background:rgb(255, 255, 255);
-            z-index: 1;
-            justify-content: center;
-            align-items: center;
-            
-        }
-        .site-welcome.active{
-            display:flex;
-        }
-    </style>
 </head>
-
 <body>
     <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
@@ -72,6 +50,7 @@
     </div> 
 
     <main>
+       
         <div data-x id="siteAbout" class="usercard">
             <div class="pictureAndText clearfix">
                     <div class="picture">
@@ -197,31 +176,33 @@
                 <div class="bar-inner"></div>
           </div>
         </nav>
-        <script>
-            portfolio1.onclick= function(){
-                portfolioBar.className = 'bar state-1'
-            }
-            portfolio2.onclick= function(){
-                portfolioBar.className = 'bar state-2'
-            }
-            portfolio3.onclick= function(){
-                portfolioBar.className = 'bar state-3'
-            }
-        </script>
-        <div class="works"style="height: 576px;">
-          <div class="big"style="top:0px; left: 0px;">
-              <img src="./img/picture1.jpg" alt="作品1">
-          </div>
-          <div class="small"style="top:0; left:645px;">
-              <img src="./img/picture2.jpg" alt="作品2">
-          </div>
-          <div class="small"style="top:299px; left: 645px;">
-              <img src="./img/picture3.jpg" alt="作品3">
-          </div>
-        </div>
+
+        <!-- 这就是 view ，用户看得见的东西 -->
+            <div id="mySlides">
+                <!-- 轮播相册-->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <img src="./img/works/myBookmarks.jpg" class="swiper-slide">
+                        <img src="./img/works/canvas.jpg" class="swiper-slide">
+                        <img src="./img/works/AppleSlide.jpg" class="swiper-slide">
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
       </section>
-      <script src="./main.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+      <!-- 模块化 -->
+      <script src="./JS/loading.js"></script>
+      <script src="./JS/sticky-topNavBar.js"></script>
+      <script src="./JS/auto-slide-up.js"></script>
+      <script src="./JS/smoothly-navigation.js"></script>
+      <script src="./JS/init-swiper.js"></script>
     </body>
   </html>
