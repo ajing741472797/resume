@@ -42,15 +42,15 @@
                     </ul>
                     </nav>
         </div>
-        
+
     </div>
 
     <div class="banner">
         <div class="mask"> </div>
-    </div> 
+    </div>
 
     <main>
-       
+
         <div data-x id="siteAbout" class="usercard">
             <div class="pictureAndText clearfix">
                     <div class="picture">
@@ -75,15 +75,15 @@
                                 </dl>
                     </div>
             </div>
-            
-          
+
+
                 <footer class="media">
                     <a href="#">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-weixin"></use>
                         </svg>
                     </a>
-                   
+
                     <a href="#">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-zhihu-copy"></use>
@@ -93,13 +93,13 @@
                     <a href="#">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-qq"></use>
-                        </svg>   
+                        </svg>
                     </a>
 
                     <a href="#">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-facebook"></use>
-                        </svg> 
+                        </svg>
                     </a>
 
                     <a href="#">
@@ -107,8 +107,8 @@
                             <use xlink:href="#icon-xinlang"></use>
                         </svg>
                     </a>
-                
-                </footer>  
+
+                </footer>
         </div>
         <p class="downloadResume-wrapper">
         <a class="downloadResume" href="./my resume.pdf" target="_blank" download>下载PDF简历</a>
@@ -196,13 +196,27 @@
                 <div class="swiper-button-next"></div>
             </div>
       </section>
+      <section class="message">
+          <h2>留言板</h2>
+          <ol id="messageList">
+          </ol>
+          <form id="postMessageForm" style="width:700px; margin:50px auto;">
+            <label for="">姓名</label>
+            <input type="text" name="name">
+            <label for="">留言</label>
+            <input type="text" name="content">
+            <input type="submit" value="提交">
+          </form>
+      </section>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
       <!-- 模块化 -->
       <script src="./JS/loading.js"></script>
       <script src="./JS/sticky-topNavBar.js"></script>
       <script src="./JS/auto-slide-up.js"></script>
       <script src="./JS/smoothly-navigation.js"></script>
       <script src="./JS/init-swiper.js"></script>
+      <script src="./JS/message.js"></script>
     </body>
   </html>
