@@ -52,8 +52,8 @@
 //     var model = {
 //       // 获取数据
 //       init: function(){
-//         var APP_ID = 'TsDnap9SEXjSvGSowP7gXXJC-gzGzoHsz'
-//         var APP_KEY = 'rGye31p12mM3wFpNRn9RADu9'
+//         var APP_ID = 'o8vzed3lpO8Nz3uXvbmjSiPA-gzGzoHsz'
+//         var APP_KEY = '5ml8Rgc8TNp8sjp2AduI0EF0'
 //         AV.init({ appId: APP_ID, appKey: APP_KEY })
 //       },
 //       fetch: function(){ 

@@ -2,7 +2,7 @@
 !function () {
    setTimeout(function () {
       siteWelcome.classList.remove('active')
-   },0000)
+   },2000)
 }.call()
 
 
